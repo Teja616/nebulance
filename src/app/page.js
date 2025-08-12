@@ -1,6 +1,7 @@
 
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { ChevronRight, Zap, Cog, TrendingUp, Users, Star, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Home as HomeIcon } from 'lucide-react';
 
 const NebulanceHomepage = () => {
@@ -109,11 +110,14 @@ const NebulanceHomepage = () => {
         <div className="flex flex-col items-center justify-center h-full space-y-8">
           {/* Logo Image */}
           <div className="mb-8 mt-4">
-            <img
+            <Image
               src="/logo.png"
               alt="Nebulance Logo"
-              className="w-12 h-12 rounded-xl border border-yellow-600/40 shadow-lg bg-black/10 object-contain"
+              width={48}
+              height={48}
+              className="rounded-xl border border-yellow-600/40 shadow-lg bg-black/10 object-contain"
               style={{ display: 'block', margin: 'auto' }}
+              priority
             />
           </div>
           {[
@@ -181,11 +185,14 @@ const NebulanceHomepage = () => {
             isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
           }`}>
             <div className="w-96 h-96 bg-gradient-to-br from-yellow-600/20 to-teal-500/20 rounded-2xl border border-yellow-600/30 flex items-center justify-center backdrop-blur-sm overflow-hidden">
-              <img
+              <Image
                 src="/nebulance.png"
                 alt="Nebulance Hero"
-                className="w-80 h-80 object-cover rounded-2xl shadow-2xl border border-yellow-600/40 bg-black/10"
+                width={320}
+                height={320}
+                className="object-cover rounded-2xl shadow-2xl border border-yellow-600/40 bg-black/10"
                 style={{ display: 'block', margin: 'auto' }}
+                priority
               />
             </div>
           </div>
@@ -235,9 +242,9 @@ const NebulanceHomepage = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-                We are pioneers in artificial intelligence, dedicated to creating solutions that don't just meet today's challenges, 
-                but anticipate tomorrow's opportunities. Our team of world-class engineers and data scientists work tirelessly to 
-                push the boundaries of what's possible with AI technology.
+                  We are pioneers in artificial intelligence, dedicated to creating solutions that don&apos;t just meet today&apos;s challenges, 
+                  but anticipate tomorrow&apos;s opportunities. Our team of world-class engineers and data scientists work tirelessly to 
+                  push the boundaries of what&apos;s possible with AI technology.
               </p>
             </div>
 
@@ -272,7 +279,7 @@ const NebulanceHomepage = () => {
                     ))}
                   </div>
                   <p className="text-gray-300 mb-6 leading-relaxed italic">
-                    "{testimonial.content}"
+                      &quot;{testimonial.content}&quot;
                   </p>
                   <div className="border-t border-yellow-600/20 pt-4">
                     <h4 className="text-teal-500 font-semibold group-hover:text-teal-400 transition-colors">
